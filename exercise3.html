@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      //   const employes = [
+      //     { id: 1, name: "Alice", grade: 78 },
+      //     { id: 2, name: "Bob", grade: 85 },
+      //     { id: 3, name: "Charlie", grade: 92 },
+      //     { id: 4, name: "David", grade: 88 },
+      //     { id: 5, name: "Eva", grade: 76 },
+      //   ];
+      //   var x = [];
+      //   for (let i = 0; i < employes.length; i++) {
+      //     if (employes[i].grade > 80) {
+      //       x.push({ id: employes[i].id, status: "promoted" });
+      //     }
+      //   }
+      // console.log(x);
+
+      const movies = [
+        { title: "Inception", ratings: [5, 4, 5, 4, 5] },
+        { title: "Interstellar", ratings: [5, 5, 4, 5, 4] },
+        { title: "Dunkirk", ratings: [4, 4, 4, 3, 4] },
+        { title: "The Dark Knight", ratings: [5, 5, 5, 5, 5] },
+        { title: "Memento", ratings: [4, 5, 4, 5, 4] },
+      ];
+      x = [];
+
+      function summ(array) {
+        var sum = 0;
+        for (let i = 0; i < array.length; i++) {
+          sum = sum + array[i];
+        }
+        return sum;
+      }
+      for (let i of movies) {
+        x.push(i.ratings);
+      }
+      for (let i = 0; i < x.length; i++) {
+        x[i] = summ(x[i]);
+      }
+      var max = 0;
+      var index = 0;
+      for (let idx in x) {
+        if (max < x[idx]) {
+          max = x[idx];
+          index = idx;
+        }
+      }
+      console.log(movies[index].title);
+    </script>
+  </body>
+</html>

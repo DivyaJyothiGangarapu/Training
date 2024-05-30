@@ -210,6 +210,106 @@ var q3 = [60, ...q1, 90, 40];
 console.log(q3);
 var t1 = [400, 500];
 let t2 = [90, 80];
-var t3 = [...t2, ...t1];
+var t3 = [...t2, ...t1];     #spread
 console.log(t3);
+```
+
+## LOOPS
+
+### FOR LOOP
+
+3 types of for loops
+
+```js
+const marks = [80, 30, 40, 23, 45];
+for (let i = 0; i < marks.length; i = i + 2) {
+  console.log("index", i, "marks", marks[i]);
+}
+//readable and simple
+for (let idx in marks) {
+  console.log("Index: ", idx, "marks:", marks[idx]);
+}
+//readable and cleaner can use when we dont want index
+for (let mark of marks) {
+  console.log("Mark:", mark);
+}
+```
+
+### exercise 1
+
+```js
+const cart = [
+  { name: "A", price: 0.5, qty: 4 },
+  { name: "B", price: 0.25, qty: 2 },
+];
+const new1 = [
+  { name: "c", price: 0.35, qty: 2 },
+  { name: "D", price: 1.0, qty: 5 },
+];
+const new2 = [...cart, ...new1];
+sum = 0;
+for (let item of new2) {
+  // for (let i = 0; i < new2.length; i = i + 1) {
+  sum = sum + new2[i].price * new2[i].qty;
+  //
+}
+console.log(sum);
+
+//output total price of all products
+```
+
+###
+
+### exercise3
+
+```js
+const employes = [
+  { id: 1, name: "Alice", grade: 78 },
+  { id: 2, name: "Bob", grade: 85 },
+  { id: 3, name: "Charlie", grade: 92 },
+  { id: 4, name: "David", grade: 88 },
+  { id: 5, name: "Eva", grade: 76 },
+];
+var x = [];
+for (let i = 0; i < employes.length; i++) {
+  if (employes[i].grade > 80) {
+    x.push({ id: employes[i].id, status: "promoted" });
+  }
+}
+console.log(x);
+// output: [{ id: 2, status: 'Promoted' }, { id: 3, status: 'Promoted' }, { id: 4, status: 'Promoted' }]
+```
+
+```js
+const movies = [
+  { title: "Inception", ratings: [5, 4, 5, 4, 5] },
+  { title: "Interstellar", ratings: [5, 5, 4, 5, 4] },
+  { title: "Dunkirk", ratings: [4, 4, 4, 3, 4] },
+  { title: "The Dark Knight", ratings: [5, 5, 5, 5, 5] },
+  { title: "Memento", ratings: [4, 5, 4, 5, 4] },
+];
+x = [];
+
+function summ(array) {
+  var sum = 0;
+  for (let i = 0; i < array.length; i++) {
+    sum = sum + array[i];
+  }
+  return sum;
+}
+for (let i = 0; i < movies.length; i++) {
+  x.push(movies[i].ratings);
+}
+for (let i = 0; i < x.length; i++) {
+  x[i] = summ(x[i]);
+}
+var max = 0;
+var index = 0;
+for (let i = 0; i < x.length; i++) {
+  if (max < x[i]) {
+    max = x[i];
+    index = i;
+  }
+}
+console.log(movies[index].title);
 ```

@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      //   const marks = [80, 30, 40, 23, 45];
+      //   for (let i = 0; i < marks.length; i = i + 2) {
+      //     console.log("index", i, "marks", marks[i]);
+      //   }
+      //   //readable and simple
+      //   for (let idx in marks) {
+      //     console.log("Index: ", idx, "marks:", marks[idx]);
+      //   }
+      //   //readable and cleaner can use when we dont want index
+      //   for (let mark of marks) {
+      //     console.log("Mark:", mark);
+      //   }
+      //   const cart = [
+      //     { name: "A", price: 0.5, qty: 4 },
+      //     { name: "B", price: 0.25, qty: 2 },
+      //   ];
+      //   const new1 = [
+      //     { name: "c", price: 0.35, qty: 2 },
+      //     { name: "D", price: 1.0, qty: 5 },
+      //   ];
+      //   const new2 = [...cart, ...new1];
+      //   for (let i = 0; i < new2.length; i = i + 1) {
+      //     // console.log(new2[i].price);
+      //   }
+      //   sum = 0;
+      //   for (let i = 0; i < new2.length; i = i + 1) {
+      //     sum = sum + new2[i].price * new2[i].qty;
+      //   }
+      //   console.log(sum);
+      const books = [
+        { title: "A", r: 4.5 },
+        { title: "B", r: 4.3 },
+        { title: "C", r: 4.9 },
+        { title: "D", r: 4.8 },
+        { title: "E", r: 4.7 },
+      ];
+      const new1 = [];
+      for (let i = 0; i < books.length; i++) {
+        if (books[i].r >= 4.7) {
+          new1.push(books[i].title);
+        }
+      }
+
+      console.log(new1);
+    </script>
+  </body>
+</html>
