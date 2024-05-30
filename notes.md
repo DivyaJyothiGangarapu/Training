@@ -202,3 +202,14 @@ const double1 = (n) => n * 2;
 3. Extensibility
 4. Testability
 5. Performance
+
+```js
+var q1 = [100, 200];
+var q2 = [...q1];
+var q3 = [60, ...q1, 90, 40];
+console.log(q3);
+var t1 = [400, 500];
+let t2 = [90, 80];
+var t3 = [...t2, ...t1];
+console.log(t3);
+```
