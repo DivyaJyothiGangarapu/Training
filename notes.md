@@ -815,3 +815,15 @@ if we directly commit changes in main branch it get reflected to the customer, w
 #### fast forward and merge commit
 
 if there are no commits in the main branch its fast forward, else merge commit.
+
+##### stash
+
+keeping temporaly in a place and after we can restore it, it doesnt store in online, if the device gone, we cant restore it as it is stored in offline, we can store multiple stashes but we have to give stash name to ,so that we can restore it by name, git stash apply stash_name.
+
+#### REBASE
+
+- rebase can combine the multiple commits into a single commit.
+- it can also drop the commit.
+- we cant squash merged commits
+- git rebase -i HEAD~2
+- 2 is the no. of comits, it may be 2,3,4,...
