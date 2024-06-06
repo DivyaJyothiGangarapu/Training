@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      /* internal css it loads in same page where as in external css, it has to be load for other html,and have to load it, it takes time,it is too long,keep concise  */
+      h1 {
+        color: rgb(139, 91, 91);
+      }
+      h2 {
+        font-size: 50px;
+        font-weight: normal;
+        font-style: italic;
+        color: aquamarine;
+        /* color formats: color name, hex,rgba,hsl(human friendly),lch */
+      }
+      .branch {
+        text-align: center;
+        text-decoration: overline;
+        text-transform: lowercase;
+        letter-spacing: 0ch;
+      }
+    </style>
+    <!-- external css -->
+    <link rel="stylesheet" href="listcss.css" />
+  </head>
+  <body>
+    <h1 class="branch">WELCOME</h1>
+    <h2>HELLO</h2>
+    <ul>
+      <!-- unordered list -->
+      <h1>hobbies</h1>
+      <!-- inline css -->
+      <li style="color: blue">gardenning</li>
+      <li>art</li>
+      <li>painting</li>
+    </ul>
+    <!-- nested list -->
+    <ol start="4">
+      <li>gardenning</li>
+      <li>
+        art
+        <ol>
+          <li>mandala art</li>
+          <li>lippan</li>
+          <li>glass</li>
+        </ol>
+      </li>
+      <li>painting</li>
+    </ol>
+    <p>
+      ...ssmkmkmkmkkmkzmsxxsxzxxxxx mzx axx xskms dwsd dwd eree ddsd defef
+      fefefe qad
+    </p>
+    <!-- link that opens in same page -->
+    <a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element">
+      HTML
+    </a>
+    <!-- break line -->
+    <br />
+    <!-- link that opens in another page -->
+    <a
+      href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element"
+      target="_blank"
+    >
+      HTML in next page
+    </a>
+    <a href="tel:9347127599">9347127599</a>
+    <a href="mailto:divyajyothigangarapu03@gmail.com"
+      >mailto:divyajyothigangarapu03@gmail.com</a
+    >
+  </body>
+</html>

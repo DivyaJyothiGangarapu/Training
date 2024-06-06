@@ -808,17 +808,25 @@ fast forward merge-> if we dont have commits ,there is no extra commits
   $ git revert
   Revert a particular commit.
 
+#
+
 #### Purpose of branch
 
 if we directly commit changes in main branch it get reflected to the customer, whether it works or not, so to avoid it , we create a branch and made changes that will not affect the customer, after complition we can merge into the main.
+
+#
 
 #### fast forward and merge commit
 
 if there are no commits in the main branch its fast forward, else merge commit.
 
-##### stash
+#
+
+#### stash
 
 keeping temporaly in a place and after we can restore it, it doesnt store in online, if the device gone, we cant restore it as it is stored in offline, we can store multiple stashes but we have to give stash name to ,so that we can restore it by name, git stash apply stash_name.
+
+#
 
 #### REBASE
 
@@ -827,3 +835,127 @@ keeping temporaly in a place and after we can restore it, it doesnt store in onl
 - we cant squash merged commits
 - git rebase -i HEAD~2
 - 2 is the no. of comits, it may be 2,3,4,...
+- change the commit history.
+- rename the commit.
+
+#
+
+### MERGE COMMIT VS REBASE
+
+- Git merge keeps the commit sequence intact by combining the histories of the two branches into a single branch. Git rebase, on the other hand, rewrites history by putting changes from one branch at the beginning of another, resulting in a more organized, linear project history.it adds total branch to the other branch,if in rebase we can search the commit from log using binary search method. git command (git bisect)
+- point of rebase is to make the history in straight line.
+- git pull -- rebase dev
+- git pull --rebase origin dev
+
+#
+
+#### Merge Conflict
+
+arise when two people have changed the same lines in a file, or if one developer deleted a file while another developer was modifying it.when both tries to merge the commits ,conflict arises.
+
+#
+
+- delete a branch  
+  git branch - D branch_name
+
+#
+
+### Key terms
+
+- configuration mgmt
+- system-code
+- CI(configuration item) => git => files
+- release mgmt
+- configuration mgmt and release mgmt is related +
+
+#
+
+#### git blame command
+
+git blame file_name
+
+#
+
+### Configuration management
+
+- CI (deals with the git and the codes.)
+- Audit (git blame,git diff)
+- baseline (are save points. there are 2 one is commit and other is tags i.e version)
+- Accounting i.e. tool to track the person, the task is assigned (git log, git blame)
+- change mgmt i.e (process of adding the new changes, quality, features )  
+  change mgmt is maintained by creating branches, pull req.
+
+#
+
+## benifits
+
+1. traceability - who did? why did?
+2. code quality and consistency
+3. Back up - reduces the risks and errors
+4. change management - maintains is easy, impressive and easy work,smooth.
+
+#
+
+### Release Manangement
+
+- planning (proper plan when release should happen,2 weeks to QA, 1 month to customer i.e. BRANCHING STRATEGY)
+- Goverance(who is in authority, development-developer,testing- QA enginnerr,devops,i.e access to whom )
+- scheduling (maintaining sprints,agile)
+- Automation (CI/CD makes release mgmt very easy)
+- contigency (backup) if any issue arises from customer,if bugfix takes time,cant wait upto that long, then roll back is done,
+
+#
+
+## CI/CD
+
+release mgmt tools are mostly PAAS (where it is a platform which is pre installed all the setup just waiting for the code)
+
+- netliply,junkin,circle CI
+- in build step, the whole code is reduced into single line that makes the storage less and makes fast.
+
+### saas
+
+all apps that provides the services
+
+google,proclink,insta,snap
+
+### paas
+
+they give the environment ,we have to build the app,gives platform to build ur customized thing.
+netlipy, render,raleway,uroko
+
+### iaas
+
+PC(100-1000),Azure,AWS
+
+#
+
+#### code => commit => pull request => reviewer => approve => merge into master
+
+#
+
+## NETLIFY PROCESS
+
+1. merge to master, if the new code is available in master, netlify will take new code
+2. Build : (uglify)removes comments, spaces,shorten variables intlo single line code
+3. Automation test : Selenium(java),cyuprus(js) if test fails it stop and report it to team,if pass next step.
+4. goes to customer
+
+### TEXT STYLING
+
+1. font-size
+2. font-weight
+3. font-style
+4. color
+
+gamet- grp of colors(SRGB)if 100% its good computer
+
+### TEXT STYLING 2
+
+1. text-transform(uppercase,lowercase)
+2. text-align(right, left)
+3. text-decoration
+4. letter spacing
+5. line-height
+
+- font size and line height should be inversely proportion,to avoid rereadability,
